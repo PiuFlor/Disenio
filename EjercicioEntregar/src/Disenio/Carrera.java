@@ -13,8 +13,7 @@ public class Carrera {
 	@Column(name ="NombreCarrera")
 	private String nombre;
 	
-	// Constructor sin parámetros (obligatorio para Hibernate)
-    public Carrera() {
+	public Carrera() {
     }
 	
 	public Carrera(int idCarrera, String nombre) {

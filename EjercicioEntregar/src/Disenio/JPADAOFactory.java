@@ -5,7 +5,7 @@ import javax.persistence.Persistence;
 
 public class JPADAOFactory implements DAOFactory {
 
-	// Singleton: única instancia
+	// Singleton: unica instancia
     private static JPADAOFactory instance;
     private EntityManager entityManager;
 
@@ -28,7 +28,7 @@ public class JPADAOFactory implements DAOFactory {
         return new CursaDAO(entityManager);
     }
     
-    // Obtener la única instancia (Singleton)
+    // Obtener la unica instancia (Singleton)
     public static JPADAOFactory getInstance() {
         if (instance == null) {
             instance = new JPADAOFactory();

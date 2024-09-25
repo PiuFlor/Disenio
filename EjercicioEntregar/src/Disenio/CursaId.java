@@ -13,7 +13,7 @@ public class CursaId implements Serializable {
     private int idEstudiante;
     private int idCarrera;
 
-    // Constructores, getters y setters
+
     public CursaId() {}
 
     public CursaId(int idEstudiante, int idCarrera) {
@@ -21,7 +21,7 @@ public class CursaId implements Serializable {
         this.idCarrera = idCarrera;
     }
 
-    // Equals y hashCode
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

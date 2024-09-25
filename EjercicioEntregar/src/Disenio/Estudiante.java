@@ -8,7 +8,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Estudiante {
-	// Atributos
 	@Id
 	@Column(nullable = false)
 	private int dni;
@@ -20,8 +19,7 @@ public class Estudiante {
 	private boolean genero; // true para masculino, false para femenino
 	private String ciudadResidencia;
 	
-	// Constructor sin parámetros (obligatorio para Hibernate)
-    public Estudiante() {
+	public Estudiante() {
     }
 	
 	// Constructor
@@ -93,7 +91,6 @@ public class Estudiante {
 		this.ciudadResidencia = ciudadResidencia;
 	}
 
-	// Método toString
 	@Override
 	public String toString() {
 		return "Estudiante{" + "dni=" + dni + ", libretaUniversitaria=" + libretaUniversitaria + ", nombre='" + nombre

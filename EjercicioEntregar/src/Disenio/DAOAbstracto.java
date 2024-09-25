@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 
 public abstract class DAOAbstracto<T, ID> implements DAOGenerico<T, ID> {
 
-	protected EntityManager entityManager;  // Usar un EntityManager para gestionar las operaciones
+	protected EntityManager entityManager;
 
     public DAOAbstracto(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -44,6 +44,5 @@ public abstract class DAOAbstracto<T, ID> implements DAOGenerico<T, ID> {
         entityManager.getTransaction().commit();
     }
 
-    // Método abstracto que las subclases deben implementar para devolver la clase de la entidad específica
     public abstract Class<T> getEntityClass();
 }

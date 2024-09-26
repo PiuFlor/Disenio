@@ -15,7 +15,7 @@ public class CarreraDAO extends DAOAbstracto<Carrera, Integer> {
         return Carrera.class;
     }
 
-    // Métodos específicos para Carrera
+
     public List<Carrera> findCarrerasByNombre(String nombre) {
         return entityManager.createQuery("SELECT c FROM Carrera c WHERE c.nombre = :nombre", Carrera.class)
                             .setParameter("nombre", nombre)

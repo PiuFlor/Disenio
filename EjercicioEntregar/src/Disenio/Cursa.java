@@ -13,8 +13,7 @@ import javax.persistence.MapsId;
 
 @Entity
 public class Cursa implements Serializable{
-	//PASAR LOS OBJETOS A CURSA A id --EJEMPLO DE ESTUDIANTE
-	private static final long serialVersionUID = 1L; // Asigna un valor adecuado
+	private static final long serialVersionUID = 1L; 
 	@EmbeddedId
     private CursaId id;
 	

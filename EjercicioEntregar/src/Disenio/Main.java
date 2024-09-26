@@ -1,42 +1,21 @@
 package Disenio;
 
 import java.time.LocalDate;
-<<<<<<< Updated upstream
-=======
 //import java.util.ArrayList;
->>>>>>> Stashed changes
 import java.util.List;
 //import java.util.Random;
 
 
 public class Main {
-<<<<<<< Updated upstream
-
-	public static void main(String[] args) {
-		// Obtener la fábrica (Singleton)
-=======
 	
     public static void main(String[] args) {
 		// Obtener la fabrica (Singleton)
->>>>>>> Stashed changes
 		JPADAOFactory daoFactory = JPADAOFactory.getInstance();
 
 		// Obtener DAOS
 		EstudianteDAO estudianteDao = daoFactory.createEstudianteDAO();
 		CarreraDAO carreraDao = daoFactory.createCarreraDAO();
 		CursaDAO cursaDao = daoFactory.createCursoDAO();
-<<<<<<< Updated upstream
-		/*
-		// Crear estudiantes
-		Estudiante estudiante1 = new Estudiante(12345678, 1001, "Juan", "Pérez", LocalDate.of(2000, 5, 15), true, "Buenos Aires");
-		Estudiante estudiante2 = new Estudiante(87654321, 1002, "María", "González", LocalDate.of(1998, 8, 22), false, "Cordoba");
-		Estudiante estudiante3 = new Estudiante(12345679, 1003, "Luis", "Fernández", LocalDate.of(1995, 12, 10), true, "Rosario");
-		Estudiante estudiante4 = new Estudiante(98765432, 1004, "Ana", "Martínez", LocalDate.of(2001, 3, 5), false, "Mendoza");
-		Estudiante estudiante5 = new Estudiante(11122233, 1005, "Carlos", "López", LocalDate.of(1999, 1, 25), true, "La Plata");
-		Estudiante estudiante6 = new Estudiante(44455566, 1006, "Sofía", "Ramírez", LocalDate.of(2002, 7, 30), false, "Tucuman");
-		Estudiante estudiante7 = new Estudiante(77788899, 1007, "Diego", "Torres", LocalDate.of(1996, 11, 20), true, "Salta");
-		Estudiante estudiante8 = new Estudiante(22233344, 1008, "Lucía", "Morales", LocalDate.of(1997, 2, 14), false, "Rosario");
-=======
 		
 		
 		// Crea estudiantes
@@ -48,7 +27,6 @@ public class Main {
 		Estudiante estudiante6 = new Estudiante(44455566, 1006, "Sofia", "Ramirez", LocalDate.of(2002, 7, 30), false, "Tucuman");
 		Estudiante estudiante7 = new Estudiante(77788899, 1007, "Diego", "Torres", LocalDate.of(1996, 11, 20), true, "Salta");
 		Estudiante estudiante8 = new Estudiante(22233344, 1008, "Lucia", "Morales", LocalDate.of(1997, 2, 14), false, "Rosario");
->>>>>>> Stashed changes
 		Estudiante estudiante9 = new Estudiante(55566677, 1009, "Fernando", "Vargas", LocalDate.of(2003, 6, 1), true, "Santiago del Estero");
 		Estudiante estudiante10 = new Estudiante(88899900, 1010, "Valentina", "Castro", LocalDate.of(1994, 9, 8), false, "Mendoza");
 
@@ -63,15 +41,9 @@ public class Main {
 		estudianteDao.save(estudiante9);
 		estudianteDao.save(estudiante10);
 
-<<<<<<< Updated upstream
-		// Crear carreras
-		Carrera carrera1 = new Carrera(1, "Ingeniería en Sistemas");
-		Carrera carrera2 = new Carrera(2, "Licenciatura en Administración");
-=======
 		// Crea carreras
 		Carrera carrera1 = new Carrera(1, "Ingenieria en Sistemas");
 		Carrera carrera2 = new Carrera(2, "Licenciatura en Administracion");
->>>>>>> Stashed changes
 		Carrera carrera3 = new Carrera(3, "Arquitectura");
 
 		carreraDao.save(carrera1);
@@ -122,76 +94,6 @@ public class Main {
 		cursaDao.save(cursa19);
 		cursaDao.save(cursa20);
 
-<<<<<<< Updated upstream
-		
-		
-*/
-
-		
-		
-		
-		
-		
-		//B5
-		/* List<Estudiante> e = estudianteDao.findByGenero(true);
-		 System.out.println("LOS DATOS SON:");
-		 for (Estudiante estudiante : e) {
-			System.out.println(estudiante);
-		}*/
-		 
-		
-		//B3
-		/*
-		 List<Estudiante> e = estudianteDao.findAll();
-		 System.out.println("LOS DATOS SON:");
-		 for (Estudiante estudiante : e) {
-			System.out.println(estudiante);
-		}*/
-		
-		//B4
-		/*Estudiante e = estudianteDao.findByLibretaUniversitaria(1001);
-		 System.out.println("El estudiante es:");
-		System.out.println(e);*/
-		
-		//B6
-		/*
-		List<Object[]> resultados = cursaDao.findCarrerasConInscriptos();
-		for (Object[] resultado : resultados) {
-		    Carrera carrera = (Carrera) resultado[0];
-		    Long cantidadInscriptos = (Long) resultado[1];
-		    
-		    // Aquí puedes trabajar con los datos, por ejemplo:
-		    System.out.println("Carrera: " + carrera.getNombre() + ", Inscriptos: " + cantidadInscriptos);
-		}*/
-		
-		
-		//B7
-		/*
-		List<Object[]> resultados = cursaDao.findEstudianteCarreraYCiudad("Arquitectura", "Rosario");
-		for (Object[] resultado : resultados) {
-		    Estudiante e = (Estudiante) resultado[0];
-		    String n = (String) resultado[1];
-		    // Aquí puedes trabajar con los datos, por ejemplo:
-		    System.out.println(e + " " +n);
-		}*/
-		
-		//C)
-		List<Object[]> resultados = cursaDao.findCarrerasConInscriptosYegresados();
-		for (Object[] resultado : resultados) {
-		    String nombreCarrera = (String) resultado[0];
-		    int anioInscripcion = (int) resultado[1];
-		    long cantidadInscriptos = (long) resultado[2]; // Contador de inscriptos
-		    long cantidadEgresados = (long) resultado[3]; // Contador de egresados
-
-		    // Aquí puedes trabajar con los datos, por ejemplo:
-		    System.out.println("Carrera: " + nombreCarrera + ", Año: " + anioInscripcion +
-		                       ", Inscriptos: " + cantidadInscriptos + 
-		                       ", Egresados: " + cantidadEgresados);
-		}
-
-	
-
-=======
 
 		// Respuestas a Los servicios:
 
@@ -286,6 +188,5 @@ public class Main {
 		
 		}
 		
->>>>>>> Stashed changes
 	}
 }

@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-public class CursaDAO extends DAOAbstracto<Cursa, Long> {
+public class CursaDAO extends DAOAbstracto<Cursa, CursaId> {
 
     public CursaDAO(EntityManager entityManager) {
         super(entityManager);
@@ -14,17 +14,8 @@ public class CursaDAO extends DAOAbstracto<Cursa, Long> {
 	public Class<Cursa> getEntityClass() {
         return Cursa.class;
     }
-<<<<<<< Updated upstream
-
-    // Métodos específicos para Curso
-    public List<Cursa> findCursosByProfesor(String profesor) {
-        return entityManager.createQuery("SELECT c FROM Curso c WHERE c.profesor = :profesor", Cursa.class)
-                            .setParameter("profesor", profesor)
-                            .getResultList();
-    }
-=======
->>>>>>> Stashed changes
     
+    //Ejercicio B)6)
     public List<Object[]> findCarrerasConInscriptos() {
         return entityManager.createQuery(
             "SELECT c, COUNT(cu.carrera.idCarrera) " +
@@ -35,6 +26,7 @@ public class CursaDAO extends DAOAbstracto<Cursa, Long> {
             .getResultList();
     }
     
+    //Ejercicio B)7)
     public List<Object[]> findEstudianteCarreraYCiudad(String nombreCarrera, String ciudad) {
         return entityManager.createQuery(
             "SELECT e, ca.nombre " +
@@ -47,6 +39,7 @@ public class CursaDAO extends DAOAbstracto<Cursa, Long> {
             .getResultList();
     }
     
+    //Ejercicio C)
     public List<Object[]> findCarrerasConInscriptosYegresados() {
         return entityManager.createQuery(
             "SELECT " +

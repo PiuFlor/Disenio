@@ -1,19 +1,31 @@
 package Disenio;
 
 import java.time.LocalDate;
+<<<<<<< Updated upstream
+=======
+//import java.util.ArrayList;
+>>>>>>> Stashed changes
 import java.util.List;
-import java.util.Random;
+//import java.util.Random;
+
 
 public class Main {
+<<<<<<< Updated upstream
 
 	public static void main(String[] args) {
 		// Obtener la fábrica (Singleton)
+=======
+	
+    public static void main(String[] args) {
+		// Obtener la fabrica (Singleton)
+>>>>>>> Stashed changes
 		JPADAOFactory daoFactory = JPADAOFactory.getInstance();
 
 		// Obtener DAOS
 		EstudianteDAO estudianteDao = daoFactory.createEstudianteDAO();
 		CarreraDAO carreraDao = daoFactory.createCarreraDAO();
 		CursaDAO cursaDao = daoFactory.createCursoDAO();
+<<<<<<< Updated upstream
 		/*
 		// Crear estudiantes
 		Estudiante estudiante1 = new Estudiante(12345678, 1001, "Juan", "Pérez", LocalDate.of(2000, 5, 15), true, "Buenos Aires");
@@ -24,6 +36,19 @@ public class Main {
 		Estudiante estudiante6 = new Estudiante(44455566, 1006, "Sofía", "Ramírez", LocalDate.of(2002, 7, 30), false, "Tucuman");
 		Estudiante estudiante7 = new Estudiante(77788899, 1007, "Diego", "Torres", LocalDate.of(1996, 11, 20), true, "Salta");
 		Estudiante estudiante8 = new Estudiante(22233344, 1008, "Lucía", "Morales", LocalDate.of(1997, 2, 14), false, "Rosario");
+=======
+		
+		
+		// Crea estudiantes
+		Estudiante estudiante1 = new Estudiante(12345678, 1001, "Juan", "Perez", LocalDate.of(2000, 5, 15), true, "Buenos Aires");
+		Estudiante estudiante2 = new Estudiante(87654321, 1002, "Maria", "Gonzalez", LocalDate.of(1998, 8, 22), false, "Cordoba");
+		Estudiante estudiante3 = new Estudiante(12345679, 1003, "Luis", "Fernandez", LocalDate.of(1995, 12, 10), true, "Rosario");
+		Estudiante estudiante4 = new Estudiante(98765432, 1004, "Ana", "Martinez", LocalDate.of(2001, 3, 5), false, "Mendoza");
+		Estudiante estudiante5 = new Estudiante(11122233, 1005, "Carlos", "Lopez", LocalDate.of(1999, 1, 25), true, "La Plata");
+		Estudiante estudiante6 = new Estudiante(44455566, 1006, "Sofia", "Ramirez", LocalDate.of(2002, 7, 30), false, "Tucuman");
+		Estudiante estudiante7 = new Estudiante(77788899, 1007, "Diego", "Torres", LocalDate.of(1996, 11, 20), true, "Salta");
+		Estudiante estudiante8 = new Estudiante(22233344, 1008, "Lucia", "Morales", LocalDate.of(1997, 2, 14), false, "Rosario");
+>>>>>>> Stashed changes
 		Estudiante estudiante9 = new Estudiante(55566677, 1009, "Fernando", "Vargas", LocalDate.of(2003, 6, 1), true, "Santiago del Estero");
 		Estudiante estudiante10 = new Estudiante(88899900, 1010, "Valentina", "Castro", LocalDate.of(1994, 9, 8), false, "Mendoza");
 
@@ -38,16 +63,22 @@ public class Main {
 		estudianteDao.save(estudiante9);
 		estudianteDao.save(estudiante10);
 
+<<<<<<< Updated upstream
 		// Crear carreras
 		Carrera carrera1 = new Carrera(1, "Ingeniería en Sistemas");
 		Carrera carrera2 = new Carrera(2, "Licenciatura en Administración");
+=======
+		// Crea carreras
+		Carrera carrera1 = new Carrera(1, "Ingenieria en Sistemas");
+		Carrera carrera2 = new Carrera(2, "Licenciatura en Administracion");
+>>>>>>> Stashed changes
 		Carrera carrera3 = new Carrera(3, "Arquitectura");
 
 		carreraDao.save(carrera1);
 		carreraDao.save(carrera2);
 		carreraDao.save(carrera3);
 
-		// Crear y guardar instancias de Cursa sin repetir combinaciones de estudiante y carrera
+		// Crea y guarda instancias de Cursa 
 		Cursa cursa1 = new Cursa(estudiante1, carrera1, LocalDate.of(2020, 2, 15), false);
 		Cursa cursa2 = new Cursa(estudiante2, carrera2, LocalDate.of(2021, 3, 1), false);
 		Cursa cursa3 = new Cursa(estudiante3, carrera3, LocalDate.of(2018, 8, 10), true);
@@ -69,7 +100,7 @@ public class Main {
 		Cursa cursa19 = new Cursa(estudiante9, carrera2, LocalDate.of(2021, 4, 5), true);
 		Cursa cursa20 = new Cursa(estudiante10, carrera1, LocalDate.of(2022, 11, 15), false);
 
-		// Guardar las instancias de Cursa
+		// Guarda las instancias de Cursa
 		cursaDao.save(cursa1);
 		cursaDao.save(cursa2);
 		cursaDao.save(cursa3);
@@ -91,6 +122,7 @@ public class Main {
 		cursaDao.save(cursa19);
 		cursaDao.save(cursa20);
 
+<<<<<<< Updated upstream
 		
 		
 */
@@ -159,5 +191,101 @@ public class Main {
 
 	
 
+=======
+
+		// Respuestas a Los servicios:
+
+		// B)1) dar de alta un estudiante
+
+		/*
+		 Como ejemplo: Estudiante estudiante1 = new Estudiante(12345678, 1001, "Juan", "Perez", LocalDate.of(2000, 5, 15), true, "Buenos Aires");
+		 estudianteDao.save(estudiante1);
+		 */
+
+		// B)2) matricular un estudiante en una carrera
+		/*
+		 Como ejemplo: Carrera carrera1 = new Carrera(1, "Ingenieria en Sistemas");
+		 carreraDao.save(carrera1); Cursa cursa1 = new Cursa(estudiante1, carrera1,
+		 LocalDate.of(2020, 2, 15), false); cursaDao.save(cursa1);
+		 */
+		
+		System.out.println("RESULTADOS DE LAS CONSULTAS: ");
+		// B)3)recuperar todos los estudiantes, y especificar algun criterio de ordenamiento simple.
+
+		List<Estudiante> e3 = estudianteDao.findAll();
+		System.out.println(
+				"EJERCICIO B)3) RECUPERAR TODOS LOS ESTUDIANTES, Y ESPECIFICAR ALGUN CRITERIO DE ORDENAMIENTO SIMPLE: ");
+		for (Estudiante estudiante : e3) {
+			System.out.println(estudiante);
+		}
+
+		System.out.println("");
+		System.out.println("");
+
+		// B)4) recuperar un estudiante, en base a su numero de libreta universitaria.
+
+		Estudiante e4 = estudianteDao.findByLibretaUniversitaria(1001);
+		System.out.println("EJERCICIO B)4) RECUPERAR UN ESTUDIANTE, EN BASE A SU NUMERO DE LIBRETA UNIVERSITARIA:");
+		System.out.println(e4);
+
+		System.out.println("");
+		System.out.println("");
+
+		// B)5) recuperar todos los estudiantes, en base a su genero.
+
+		List<Estudiante> e5 = estudianteDao.findByGenero(true);
+		System.out.println("EJERCICIO B)5) RECUPERAR TODOS LOS ESTUDIANTES, EN BASE A SU GENERO:");
+		for (Estudiante estudiante : e5) {
+			System.out.println(estudiante);
+		}
+
+		System.out.println("");
+		System.out.println("");
+
+		// B)6) recuperar las carreras con estudiantes inscriptos, y ordenar por cantidad de inscriptos.
+
+		List<Object[]> resultados6 = cursaDao.findCarrerasConInscriptos();
+		System.out.println(
+				"EJERCICIO B)6) RECUPERAR LAS CARRERAS CON ESTUDIANTES INSCRIPTOS, Y ORDENAR POR CANTIDAD DE INSCRIPTOS: ");
+		for (Object[] resultado : resultados6) {
+			Carrera carrera = (Carrera) resultado[0];
+			Long cantidadInscriptos = (Long) resultado[1];
+			System.out.println("Carrera: " + carrera.getNombre() + ", Inscriptos: " + cantidadInscriptos);
+		}
+
+		System.out.println("");
+		System.out.println("");
+
+		// B)7) recuperar los estudiantes de una determinada carrera, filtrado por ciudad de residencia.
+
+		List<Object[]> resultados7 = cursaDao.findEstudianteCarreraYCiudad("Arquitectura", "Rosario");
+		System.out.println(
+				"EJERCICIO B)7) RECUPERAR LOS ESTUDIANTES DE UNA DETERMINADA CARRERA, FILTRADO POR CIUDAD DE RESIDENCIA: ");
+		for (Object[] resultado : resultados7) {
+			Estudiante e = (Estudiante) resultado[0];
+			String n = (String) resultado[1];
+			System.out.println(e + " " + n);
+		}
+
+		System.out.println("");
+		System.out.println("");
+
+		// C) Generar un reporte de las carreras, que para cada carrera incluya informaciaon de los inscriptos y egresados por anio. Se deben ordenar las carreras
+		// alfabeticamente, y presentar los anios de manera cronologica.
+
+		List<Object[]> resultadosC = cursaDao.findCarrerasConInscriptosYegresados();
+		System.out.println(
+				"EJERCICIO C) GENERAR UN REPORTE DE LAS CARRERAS, QUE PARA CADA CARRERA INCLUYA INFORMACIIN DE LOS INSCRIPTOS Y EGRESADOS POR ANIO. SE DEBEN ORDENAR LAS CARRERAS ALFABATICAMENTE, Y PRESENTAR LOS ANIOS DE MANERA CRONOLOGICA: ");
+		for (Object[] resultado : resultadosC) {
+			String nombreCarrera = (String) resultado[0];
+			int anioInscripcion = (int) resultado[1];
+			long cantidadInscriptos = (long) resultado[2];
+			long cantidadEgresados = (long) resultado[3];
+			System.out.println("Carrera: " + nombreCarrera + ", Anio: " + anioInscripcion + ", Inscriptos: "
+					+ cantidadInscriptos + ", Egresados: " + cantidadEgresados);
+		
+		}
+		
+>>>>>>> Stashed changes
 	}
 }

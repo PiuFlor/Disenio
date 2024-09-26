@@ -26,7 +26,7 @@ public abstract class DAOAbstracto<T, ID> implements DAOGenerico<T, ID> {
     @Override
     public void save(T entity) {
         entityManager.getTransaction().begin();
-        entityManager.persist(entity);
+        entityManager.merge(entity);
         entityManager.getTransaction().commit();
     }
 

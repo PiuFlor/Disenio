@@ -14,6 +14,7 @@ public class CursaDAO extends DAOAbstracto<Cursa, Long> {
 	public Class<Cursa> getEntityClass() {
         return Cursa.class;
     }
+<<<<<<< Updated upstream
 
     // Métodos específicos para Curso
     public List<Cursa> findCursosByProfesor(String profesor) {
@@ -21,6 +22,8 @@ public class CursaDAO extends DAOAbstracto<Cursa, Long> {
                             .setParameter("profesor", profesor)
                             .getResultList();
     }
+=======
+>>>>>>> Stashed changes
     
     public List<Object[]> findCarrerasConInscriptos() {
         return entityManager.createQuery(

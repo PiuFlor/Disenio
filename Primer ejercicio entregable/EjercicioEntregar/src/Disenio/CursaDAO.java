@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-public class CursaDAO extends DAOAbstracto<Cursa, CursaId> {
+public class CursaDAO extends DAOAbstracto<Cursa, CursaId> implements CursaDAOinter {
 
     public CursaDAO(EntityManager entityManager) {
         super(entityManager);
@@ -16,6 +16,7 @@ public class CursaDAO extends DAOAbstracto<Cursa, CursaId> {
     }
     
     //Ejercicio B)6)
+    @Override
     public List<Object[]> findCarrerasConInscriptos() {
         return entityManager.createQuery(
             "SELECT c, COUNT(cu.carrera.idCarrera) " +
@@ -27,6 +28,7 @@ public class CursaDAO extends DAOAbstracto<Cursa, CursaId> {
     }
     
     //Ejercicio B)7)
+    @Override
     public List<Object[]> findEstudianteCarreraYCiudad(String nombreCarrera, String ciudad) {
         return entityManager.createQuery(
             "SELECT e, ca.nombre " +
@@ -40,6 +42,7 @@ public class CursaDAO extends DAOAbstracto<Cursa, CursaId> {
     }
     
     //Ejercicio C)
+    @Override
     public List<Object[]> findCarrerasConInscriptosYegresados() {
         return entityManager.createQuery(
             "SELECT " +

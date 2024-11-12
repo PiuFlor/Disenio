@@ -7,6 +7,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.CursaService.Cursa.Configuracion.Estudiante;
 import com.CursaService.Cursa.Configuracion.EstudianteCliente;
+import com.CursaService.Cursa.Configuracion.CarreraCliente;
 import com.CursaService.Cursa.Modelo.Cursa;
 import com.CursaService.Cursa.Repositorio.CursaRepositorio;
 
@@ -37,6 +38,10 @@ public class CursaServicio {
 
     public List<Cursa> obtenerCursasPorCarrera(String carrera) {
         return cursaRepository.findByCarrera(carrera);
+    }
+
+    public List<Integer> obtenerEstudiantesPorCarrera(String carrera){
+        return cursaRepository.findByCarrera(carrera);    
     }
     /*   public List<Cursa> obtenerCursasPorEstudiante(int estudianteId) {
         return cursaRepository.findByEstudianteId(estudianteId);

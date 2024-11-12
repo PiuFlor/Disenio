@@ -1,21 +1,25 @@
-package com.EstudianteService.Estudiante.Servicio;
+package com.CarreraService.Carrera.Servicio;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.EstudianteService.Estudiante.Modelo.Estudiante;
-import com.EstudianteService.Estudiante.Repositorio.EstudianteRepositorio;
+import com.CarreraService.Carrera.Modelo.Carrera;
+import com.CarreraService.Carrera.Repositorio.CarreraRepositorio;
 
 @Service
-public class EstudianteServicio {
+public class CarreraServicio {
     @Autowired
-    private EstudianteRepositorio estudianteRepository;
+    private CarreraRepositorio carreraRepository;
 
-    public Estudiante agregarEstudiante(Estudiante estudiante) {
+    public Carrera obtenerCarreraPorId(int id){
+        return carreraRepository.findByIdCarrera(id);
+    }
+   /* public Estudiante agregarEstudiante(Estudiante estudiante) {
         return estudianteRepository.save(estudiante);
     }
 
@@ -30,6 +34,6 @@ public class EstudianteServicio {
 
      public Estudiante obtenerEstudiantePorDni(int dni){
         return estudianteRepository.findByDni(dni);
-    }
+    }*/
 
 }

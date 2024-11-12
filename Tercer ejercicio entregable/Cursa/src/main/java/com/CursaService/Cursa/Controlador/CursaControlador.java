@@ -31,6 +31,12 @@ public class CursaControlador {
     public List<Cursa> obtenerCursasPorCarrera(@PathVariable String carrera) {
         return cursaService.obtenerCursasPorCarrera(carrera);
     }
+
+    @GetMapping("/carrera/{nombreCarrera}")
+    public List<Integer> obtenerEstudiantesPorCarrera(@PathVariable String nombreCarrera) {
+        return cursaServicio.obtenerEstudiantesPorCarrera(nombreCarrera);
+    }
+
     /*
     @GetMapping("/estudiante/{estudianteId}")
     public List<Cursa> obtenerCursasPorEstudiante(@PathVariable int estudianteId) {

@@ -1,4 +1,4 @@
-package com.EstudianteService.Estudiante.Controlador;
+package com.CarreraService.Carrera.Controlador;
 
 import java.util.List;
 
@@ -10,40 +10,45 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.EstudianteService.Estudiante.Modelo.Estudiante;
-import com.EstudianteService.Estudiante.Servicio.EstudianteServicio;
+import com.CarreraService.Carrera.Modelo.Carrera;
+import com.CarreraService.Carrera.Servicio.CarreraServicio;
 
 
 @RestController
-@RequestMapping("/api/estudiantes")
-public class EstudianteControlador {
+@RequestMapping("/api/carreras")
+public class CarreraControlador {
 
     @Autowired
-    private EstudianteServicio estudianteService;
+    private CarreraServicio carreraService;
 
     @GetMapping("/test")
     public String test() {
         return "Esta funcionando!";
     }
 
+    @GetMapping("/id/{id}")
+    public Carrera obtenerCarreraPorId(@PathVariable int id){
+        return carreraService.obtenerCarreraPorId(id);
+    }
+/*
     @PostMapping
-    public Estudiante agregarEstudiante(@RequestBody Estudiante estudiante) {
+    public Carrera agregarEstudiante(@RequestBody Carrera estudiante) {
         return estudianteService.agregarEstudiante(estudiante);
     }
 
     @GetMapping("/dni/{dni}")
-    public Estudiante obtenerEstudiantePorDni(@PathVariable int dni){
+    public Carrera obtenerEstudiantePorDni(@PathVariable int dni){
         return estudianteService.obtenerEstudiantePorDni(dni);
     }
 
 
     @GetMapping("/genero/{genero}")
-    public List<Estudiante> obtenerEstudiantesPorGenero(@PathVariable boolean genero) {
+    public List<Carrera> obtenerEstudiantesPorGenero(@PathVariable boolean genero) {
         return estudianteService.obtenerEstudiantesPorGenero(genero);
     }
 
     @GetMapping("/libreta/{libreta}")
-    public Estudiante obtenerEstudiantePorLibreta(@PathVariable int libreta) {
+    public Carrera obtenerEstudiantePorLibreta(@PathVariable int libreta) {
         return estudianteService.obtenerEstudiantePorLibreta(libreta); 
-    }
+    }*/
 }

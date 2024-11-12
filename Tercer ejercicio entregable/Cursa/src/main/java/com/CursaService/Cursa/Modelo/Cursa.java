@@ -11,20 +11,15 @@ public class Cursa {
     private int id;
 
 
+
     //@Column(name = "estudiante_id", nullable = true)
     private int dniEstudiante; // Relación con la entidad Estudiante
 
-    public int getDniEstudiante() {
-        return dniEstudiante;
-    }
 
-    public void setDniEstudiante(int dniEstudiante) {
-        this.dniEstudiante = dniEstudiante;
-    }
-
-    private String carrera;
     private LocalDate fechaInscripcion;
-    private Boolean graduado;
+	private boolean egresado;
+    private String carrera;
+
 
     // Constructores
     public Cursa() {}
@@ -41,12 +36,20 @@ public class Cursa {
         this.id = id;
         this.carrera = carrera;
         this.fechaInscripcion = fechaInscripcion;
-        this.graduado = graduado;
+        this.egresado = graduado;
     }
 
     // Getters y Setters
     public int getId() {
         return id;
+    }
+
+    public int getDniEstudiante() {
+        return dniEstudiante;
+    }
+
+    public void setDniEstudiante(int dniEstudiante) {
+        this.dniEstudiante = dniEstudiante;
     }
 
     public void setId(int id) {
@@ -78,10 +81,10 @@ public class Cursa {
     }
 
     public Boolean getGraduado() {
-        return graduado;
+        return egresado;
     }
 
-    public void setGraduado(Boolean graduado) {
-        this.graduado = graduado;
+    public void setEgresado(Boolean graduado) {
+        this.egresado = graduado;
     }
 }

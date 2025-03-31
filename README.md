@@ -2,7 +2,7 @@
 
 ## Primer Ejercicio
 
-En el primer ejercicio entregable se presenta la resolución de un ejercicio solicitado por la cátedra, incluyendo los diagramas DER y onjetos correspondientes y resolviendo diversas consultas en la base de datos.
+En el primer ejercicio entregable se presenta la resolución de un ejercicio solicitado por la cátedra, incluyendo los diagramas DER y objetos correspondientes y resolviendo diversas consultas en la base de datos.
 Existe un informe detallado que ofrece más información sobre el proceso y las soluciones implementadas.
 
 ## Tercer Ejercicio
